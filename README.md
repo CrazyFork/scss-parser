@@ -1,3 +1,19 @@
+# Notes
+
+* 这个parser 是top-down parser
+* 很依赖scss 语法规整/规范, 不能处理的case有
+  * url(//www.baidu.com), // 会被理解成 comment, 必须写成 url('//www.baidu.com')
+  * `background: red;` , 
+    * 尾部的comma不能被省略, 需要`;`来判断是不是declaration statement
+    * 中间的空格也不能被省略, 需要空格来排除psedo-class
+
+* 这个parser手写的其实已经非常规范, 语法层面有很多值得参考的地方.
+  * Input
+  * TokenStream
+
+
+
+
 # SCSS Parser
 
 [![Build Status][travis-image]][travis-url]
